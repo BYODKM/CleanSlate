@@ -36,7 +36,7 @@ module.exports = (grunt) ->
         livereload: true
       default:
         files: ['dev/**/*.jade', 'dev/**/*.styl', 'dev/**/*.coffee']
-        tasks: ['jade', 'stylus', 'coffee', 'jshint']
+        tasks: ['build']
 
   grunt.registerTask 'build', ['jade', 'stylus', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
