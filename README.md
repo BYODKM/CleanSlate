@@ -1,6 +1,6 @@
 # Uncompressor
 
-Anti-minify environment
+None minify dev environment.
 
 ```
 $ git clone https://github.com/BYODKM/uncompressor.git
