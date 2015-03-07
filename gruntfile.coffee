@@ -1,4 +1,4 @@
-module.exports = (grunt) ->
+module.exports = (grunt)->
 
   require('load-grunt-tasks')(grunt)
 
@@ -8,20 +8,28 @@ module.exports = (grunt) ->
       options:
         pretty: true
       compile:
-        files: 'dev/jade/index.html': ['dev/jade/index.jade']
+        files: 'dev/jade/jade.html': ['dev/jade/src.jade']
 
     stylus:
       options:
         compress: false
       compile:
-        files: 'dev/styl/style.css': ['dev/styl/style.styl']
+        files: 'dev/styl/styl.css': ['dev/styl/src.styl']
+
+    sass:
+      options:
+        loadPath: require('node-bourbon').includePaths
+        sourcemap: 'none'
+        style: 'expanded'
+      compile:
+        files: 'dev/sass/sass.css': ['dev/sass/src.sass']
 
     coffee:
       compile:
-        files: 'dev/coffee/script.js': ['dev/coffee/script.coffee']
+        files: 'dev/coffee/coffee.js': ['dev/coffee/src.coffee']
 
     jshint:
-      files: ['dev/coffee/script.js']
+      files: ['dev/coffee/coffee.js']
 
     connect:
       server:
@@ -35,8 +43,8 @@ module.exports = (grunt) ->
       options:
         livereload: true
       default:
-        files: ['dev/**/*.jade', 'dev/**/*.styl', 'dev/**/*.coffee']
+        files: ['dev/**/src.*']
         tasks: ['build']
 
-  grunt.registerTask 'build', ['jade', 'stylus', 'coffee', 'jshint']
+  grunt.registerTask 'build', ['jade', 'stylus', 'sass', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
