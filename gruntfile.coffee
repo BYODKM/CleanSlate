@@ -13,6 +13,7 @@ module.exports = (grunt)->
     stylus:
       options:
         compress: false
+        use: [require('kouto-swiss')]
       compile:
         files: 'dev/styl/styl.css': ['dev/styl/src.styl']
 

@@ -11,6 +11,7 @@
     "grunt-contrib-sass": "~0.9.2",
     "grunt-contrib-stylus": "~0.20.0",
     "grunt-contrib-watch": "~0.6.1",
+    "kouto-swiss": "~0.11.9",
     "load-grunt-tasks": "~3.1.0",
     "node-bourbon": "~4.2.0"
   }
