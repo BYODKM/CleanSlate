@@ -22,8 +22,10 @@ module.exports = (grunt)->
         loadPath: require('node-bourbon').includePaths
         sourcemap: 'none'
         style: 'expanded'
-      compile:
+      sass:
         files: 'dev/sass/sass.css': ['dev/sass/src.sass']
+      scss:
+        files: 'dev/scss/scss.css': ['dev/scss/src.scss']
 
     coffee:
       compile:
