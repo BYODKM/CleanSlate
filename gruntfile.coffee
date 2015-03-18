@@ -40,7 +40,7 @@ module.exports = (grunt)->
           port: '3000'
           base: 'dev/'
           open:
-            target: 'http://localhost:<%= connect.server.options.port %>/jade/'
+            target: 'http://localhost:<%= connect.server.options.port %>/jade/jade.html'
 
     watch:
       options:
