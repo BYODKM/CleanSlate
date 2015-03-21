@@ -1,6 +1,6 @@
 # Uncompressor
 
-None minify compile environment.
+Unminify compile environment.
 
 ```
 $ git clone https://github.com/BYODKM/uncompressor.git
