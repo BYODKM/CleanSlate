@@ -49,5 +49,6 @@ module.exports = (grunt)->
         files: ['dev/**/src.*']
         tasks: ['build']
 
+  grunt.registerTask 'default', ['build', 'serve']
   grunt.registerTask 'build', ['jade', 'stylus', 'sass', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
