@@ -1,4 +1,4 @@
-# Uncompressor
+# decompressor
 
 Unminify compile environment.
 
