@@ -3,8 +3,8 @@
 Unminify compile environment.
 
 ```
-$ git clone https://github.com/BYODKM/uncompressor.git
-$ cd uncompressor
+$ git clone https://github.com/BYODKM/decompressor.git
+$ cd decompressor
 $ npm install
 $ grunt
 ```
