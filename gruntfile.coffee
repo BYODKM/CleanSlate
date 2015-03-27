@@ -19,9 +19,7 @@ module.exports = (grunt)->
 
     sass:
       options:
-        loadPath: require('node-bourbon').includePaths
-        sourcemap: 'none'
-        style: 'expanded'
+        includePaths: require('node-bourbon').includePaths
       sass:
         files: 'dev/sass/sass.css': ['dev/sass/src.sass']
       scss:
