@@ -10,6 +10,10 @@ module.exports = (grunt)->
       compile:
         files: 'dev/jade/jade.html': ['dev/jade/src.jade']
 
+    markdown:
+      compile:
+        files: 'dev/md/md.html': ['dev/md/src.md']
+
     stylus:
       options:
         compress: false
@@ -24,6 +28,13 @@ module.exports = (grunt)->
         files: 'dev/sass/sass.css': ['dev/sass/src.sass']
       scss:
         files: 'dev/scss/scss.css': ['dev/scss/src.scss']
+
+    csslint:
+      strict:
+        options:
+          csslintrc: '.csslintrc'
+          import: 2
+        src: ['dev/**/*.css']
 
     coffee:
       compile:
@@ -48,5 +59,5 @@ module.exports = (grunt)->
         tasks: ['build']
 
   grunt.registerTask 'default', ['build', 'serve']
-  grunt.registerTask 'build', ['jade', 'stylus', 'sass', 'coffee', 'jshint']
+  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'csslint', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
