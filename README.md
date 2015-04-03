@@ -1,10 +1,10 @@
-# decompressor
+# CleanSlate
 
 Unminify compile environment.
 
 ```
 $ git clone https://github.com/BYODKM/decompressor.git
-$ cd decompressor
+$ cd CleanSlate
 $ npm install
 $ grunt
 ```
