@@ -41,7 +41,7 @@ module.exports = (grunt)->
         files: 'dev/coffee/coffee.js': ['dev/coffee/src.coffee']
 
     jshint:
-      files: ['dev/coffee/coffee.js']
+      files: ['dev/**/*.js']
 
     connect:
       server:
