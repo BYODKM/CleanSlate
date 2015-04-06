@@ -1,6 +1,6 @@
 # CleanSlate
 
-Unminify compile environment.
+Unminify compile-testing environment.
 
 ```
 $ git clone https://github.com/BYODKM/CleanSlate.git
