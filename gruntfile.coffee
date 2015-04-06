@@ -29,6 +29,14 @@ module.exports = (grunt)->
       scss:
         files: 'dev/scss/scss.css': ['dev/scss/src.scss']
 
+    autoprefixer:
+      options:
+        browsers: ['Android >= 2.3', 'ie >= 9']
+      sass:
+        src: 'dev/sass/sass.css'
+      scss:
+        src: 'dev/scss/scss.css'
+
     csslint:
       strict:
         options:
@@ -59,5 +67,5 @@ module.exports = (grunt)->
         tasks: ['build']
 
   grunt.registerTask 'default', ['build', 'serve']
-  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'csslint', 'coffee', 'jshint']
+  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'csslint', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
