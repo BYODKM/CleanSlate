@@ -31,11 +31,13 @@ module.exports = (grunt)->
 
     autoprefixer:
       options:
-        browsers: ['Android >= 2.3', 'ie >= 9']
+        browsers: ['last 2 versions', 'Android >= 2.3', 'ie >= 9']
       sass:
         src: 'dev/sass/sass.css'
       scss:
         src: 'dev/scss/scss.css'
+      styl:
+        src: 'dev/styl/styl.css'
 
     csslint:
       strict:
