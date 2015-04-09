@@ -39,13 +39,6 @@ module.exports = (grunt)->
       styl:
         src: 'dev/styl/styl.css'
 
-    csslint:
-      strict:
-        options:
-          csslintrc: '.csslintrc'
-          import: 2
-        src: ['dev/**/*.css']
-
     coffee:
       compile:
         files: 'dev/coffee/coffee.js': ['dev/coffee/src.coffee']
@@ -69,5 +62,5 @@ module.exports = (grunt)->
         tasks: ['build']
 
   grunt.registerTask 'default', ['build', 'serve']
-  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'csslint', 'coffee', 'jshint']
+  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
