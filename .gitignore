@@ -30,3 +30,5 @@ node_modules
 *.html
 *.js
 .sass-cache
+bower_components
+lib

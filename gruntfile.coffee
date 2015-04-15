@@ -4,6 +4,9 @@ module.exports = (grunt)->
 
   grunt.initConfig
 
+    bower:
+      install: {}
+
     jade:
       options:
         pretty: true
@@ -50,9 +53,8 @@ module.exports = (grunt)->
       server:
         options:
           port: '3000'
-          base: 'dev/'
           open:
-            target: 'http://localhost:<%= connect.server.options.port %>/jade/jade.html'
+            target: 'http://localhost:<%= connect.server.options.port %>/dev/jade/jade.html'
 
     watch:
       options:
@@ -61,6 +63,6 @@ module.exports = (grunt)->
         files: ['dev/**/src.*']
         tasks: ['build']
 
-  grunt.registerTask 'default', ['build', 'serve']
+  grunt.registerTask 'default', ['bower', 'build', 'serve']
   grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'jshint']
   grunt.registerTask 'serve', ['connect', 'watch']
