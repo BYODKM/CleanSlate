@@ -31,4 +31,3 @@ node_modules
 *.js
 .sass-cache
 .tscache
-lib
