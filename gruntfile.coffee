@@ -46,6 +46,14 @@ module.exports = (grunt)->
       compile:
         files: 'dev/coffee/coffee.js': ['dev/coffee/src.coffee']
 
+    ts:
+      options:
+        watch: 'never'
+        sourceMap: false
+      compile:
+        src: ['dev/ts/src.ts']
+        out: 'dev/ts/ts.js'
+
     jshint:
       files: ['dev/**/*.js']
 
@@ -59,10 +67,16 @@ module.exports = (grunt)->
     watch:
       options:
         livereload: true
-      default:
-        files: ['dev/**/src.*']
-        tasks: ['build']
+      html:
+        files: ['dev/**/*.jade', 'dev/**/*.md']
+        tasks: ['jade', 'markdown']
+      css:
+        files: ['dev/**/*.styl', 'dev/**/*.sass', 'dev/**/*.scss']
+        tasks: ['stylus', 'sass', 'autoprefixer']
+      js:
+        files: ['dev/**/*.coffee', 'dev/**/*.ts']
+        tasks: ['coffee', 'ts', 'jshint']
 
-  grunt.registerTask 'default', ['bower', 'build', 'serve']
-  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'jshint']
+  grunt.registerTask 'default', ['bower', 'build']
+  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'ts', 'jshint', 'watch']
   grunt.registerTask 'serve', ['connect', 'watch']

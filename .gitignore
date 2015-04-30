@@ -30,5 +30,6 @@ node_modules
 *.html
 *.js
 .sass-cache
+.tscache
 bower_components
 lib

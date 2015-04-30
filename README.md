@@ -17,6 +17,7 @@ $ grunt
 - `.sass`
 - `.scss`
 - `.styl`
+- `.ts`
 
 ## License
 
