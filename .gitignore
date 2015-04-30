@@ -31,5 +31,4 @@ node_modules
 *.js
 .sass-cache
 .tscache
-bower_components
 lib

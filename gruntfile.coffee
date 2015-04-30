@@ -4,9 +4,6 @@ module.exports = (grunt)->
 
   grunt.initConfig
 
-    bower:
-      install: {}
-
     jade:
       options:
         pretty: true
@@ -77,6 +74,6 @@ module.exports = (grunt)->
         files: ['dev/**/*.coffee', 'dev/**/*.ts']
         tasks: ['coffee', 'ts', 'jshint']
 
-  grunt.registerTask 'default', ['bower', 'build']
+  grunt.registerTask 'default', ['build']
   grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'ts', 'jshint', 'watch']
   grunt.registerTask 'serve', ['connect', 'watch']

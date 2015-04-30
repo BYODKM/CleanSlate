@@ -1,8 +1,0 @@
-{
-  "name": "CleanSlate",
-  "version": "0.1.0",
-  "private": true,
-  "devDependencies": {
-    "normalize.css": "~3.0.3"
-  }
-}
