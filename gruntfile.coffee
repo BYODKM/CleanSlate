@@ -78,6 +78,4 @@ module.exports = (grunt)->
         files: ['dev/**/*.coffee', 'dev/**/*.ts']
         tasks: ['coffee', 'ts', 'jshint']
 
-  grunt.registerTask 'default', ['build', 'watch']
-  grunt.registerTask 'build', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'ts', 'jshint']
-  grunt.registerTask 'serve', ['build', 'connect', 'watch']
+  grunt.registerTask 'default', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'ts', 'jshint', 'connect', 'watch']
