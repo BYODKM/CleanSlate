@@ -45,14 +45,6 @@ module.exports = (grunt)->
       compile:
         files: 'dev/coffee/coffee.js': ['dev/coffee/src.coffee']
 
-    ts:
-      options:
-        watch: 'never'
-        sourceMap: false
-      compile:
-        src: ['dev/ts/src.ts']
-        out: 'dev/ts/ts.js'
-
     jshint:
       globals:
         angular: true
@@ -75,7 +67,7 @@ module.exports = (grunt)->
         files: ['dev/**/*.styl', 'dev/**/*.sass', 'dev/**/*.scss']
         tasks: ['stylus', 'sass', 'autoprefixer']
       js:
-        files: ['dev/**/*.coffee', 'dev/**/*.ts']
-        tasks: ['coffee', 'ts', 'jshint']
+        files: ['dev/**/*.coffee']
+        tasks: ['coffee', 'jshint']
 
-  grunt.registerTask 'default', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'ts', 'jshint', 'connect', 'watch']
+  grunt.registerTask 'default', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'jshint', 'connect', 'watch']

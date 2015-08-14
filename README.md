@@ -1,6 +1,6 @@
 # CleanSlate
 
-Unminify Compile-testing Environment
+Anti-minify Compile-testing Environment
 
 ```
 $ git clone https://github.com/BYODKM/CleanSlate.git
@@ -17,7 +17,6 @@ $ grunt
 - `.sass`
 - `.scss`
 - `.styl`
-- `.ts`
 
 ## License
 
