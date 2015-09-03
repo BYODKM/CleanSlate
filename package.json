@@ -14,6 +14,7 @@
     "grunt-contrib-jshint": "~0.11.2",
     "grunt-contrib-stylus": "~0.22.0",
     "grunt-contrib-watch": "~0.6.1",
+    "grunt-csscomb": "~3.1.0",
     "grunt-markdown": "~0.7.0",
     "grunt-sass": "~1.0.0",
     "kouto-swiss": "~0.11.13",

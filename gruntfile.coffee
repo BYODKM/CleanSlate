@@ -39,6 +39,16 @@ module.exports = (grunt)->
       styl:
         src: 'dev/styl/styl.css'
 
+    csscomb:
+      options:
+        config: '.csscomb.json'
+      sass:
+        files: 'dev/sass/sass.css': ['dev/sass/sass.css']
+      scss:
+        files: 'dev/scss/scss.css': ['dev/scss/scss.css']
+      styl:
+        files: 'dev/styl/styl.css': ['dev/styl/styl.css']
+
     coffee:
       options:
         bare: true
@@ -65,9 +75,9 @@ module.exports = (grunt)->
         tasks: ['jade', 'markdown']
       css:
         files: ['dev/**/*.styl', 'dev/**/*.sass', 'dev/**/*.scss']
-        tasks: ['stylus', 'sass', 'autoprefixer']
+        tasks: ['stylus', 'sass', 'autoprefixer', 'csscomb']
       js:
         files: ['dev/**/*.coffee']
         tasks: ['coffee', 'jshint']
 
-  grunt.registerTask 'default', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'coffee', 'jshint', 'connect', 'watch']
+  grunt.registerTask 'default', ['jade', 'markdown', 'stylus', 'sass', 'autoprefixer', 'csscomb', 'coffee', 'jshint', 'connect', 'watch']
